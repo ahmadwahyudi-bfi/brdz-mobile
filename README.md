@@ -7,10 +7,6 @@ Brdz Test project
 ## Directory Structure
 The following shows the directory structure following monorepo and basic application architecture:
 ```
-
-## Directory Structure
-The following shows the directory structure following monorepo and basic application architecture:
-```
 lib
 ├── main.dart
 ├── core/
