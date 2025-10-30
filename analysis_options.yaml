@@ -1,0 +1,24 @@
+include: strict_lint.yaml
+
+analyzer:
+  exclude:
+    - '**/app_localizations*.dart'
+    - '**.g.dart'
+    - '**.freezed.dart'
+  errors:
+    depend_on_referenced_packages: ignore # Remove this to show warning
+    deprecated_member_use: ignore # Remove this to show warning
+    use_late_for_private_fields_and_variables: ignore # Remove this to show warning
+    invalid_annotation_target: ignore # https://github.com/rrousselGit/freezed/issues/488
+    use_build_context_synchronously: ignore
+    avoid_classes_with_only_static_members: ignore
+    argument_type_not_assignable: ignore
+
+linter:
+  rules:
+    unnecessary_parenthesis: false # Disabled due to false positive bug https://github.com/dart-lang/linter/issues/4346
+    avoid_redundant_argument_values: false # Allow explicit value assignments, especially for enums
+    # Follow flutter repo https://github.com/flutter/flutter/blob/master/analysis_options.yaml
+    prefer_single_quotes: true
+    sort_constructors_first: true
+    use_build_context_synchronously: false
